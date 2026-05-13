@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Network Security Config
+  
+  WHY THIS FILE EXISTS:
+  Android 9+ blocks cleartext (HTTP) traffic by default.
+  React Native's Metro bundler communicates over HTTP during development.
+  This config allows cleartext only for the local dev server.
+  
+  In production builds, ONLY HTTPS is allowed.
+-->
+<network-security-config>
+    <!-- Allow HTTP to Metro dev server during development -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">localhost</domain>
+        <domain includeSubdomains="false">10.0.2.2</domain>   <!-- Android emulator → host -->
+        <domain includeSubdomains="false">10.0.3.2</domain>   <!-- Genymotion → host -->
+    </domain-config>
+</network-security-config>

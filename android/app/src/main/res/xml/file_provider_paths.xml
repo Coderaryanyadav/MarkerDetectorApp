@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  FileProvider paths — defines which directories can be shared via content URIs.
+  Used when sharing captured marker snapshots with other apps.
+-->
+<paths>
+    <!-- App's private files directory -->
+    <files-path name="app_files" path="." />
+    <!-- External cache for temporary image exports -->
+    <external-cache-path name="external_cache" path="." />
+    <!-- App-specific external storage -->
+    <external-files-path name="external_files" path="." />
+</paths>
